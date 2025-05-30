@@ -148,14 +148,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Autoregressive mechanisms have driven milestone advancements in text and image generation. However, directly applying autoregressive paradigms to robotic policy faces critical challenges including weak holistic comprehension, significant cumulative errors, and limited multi-modal modeling ability.
-          </p>
-          <p> 
-            In this paper, we propose HAMR, a novel hierarchical autoregressive paradigm with a multi-scale action representation mechanism, enabling efficient and accurate action prediction.
-            Specifically, HAMR employs a dual-autoregressive architecture: a high-level module focuses on capturing long-horizon motion features, while a low-level module generates fine-grained actions, such that enhancing the model's general understanding ability.
-            Within the low-level module, a multi-scale action prediction scheme encodes trajectories from coarse to fine. This mechanism utilizes fine-grained feature outputs to correct coarse predictions to reduce cumulative errors.
+            Autoregressive mechanisms have driven milestone advancements in text and image generation. However, autoregressive-based robot policies still face critical challenges including weak holistic comprehension, significant cumulative errors, and limited multi-modal modeling ability.
+            In this paper, we propose HAMR, a novel Hierarchical Autoregressive paradigm with Multi-scale action Refinement, enabling efficient and accurate action prediction.
+            Specifically, HAMR employs a hierarchical architecture: a high-level module focuses on capturing long-horizon motion features, while a low-level module generates fine-grained actions, thereby enhancing the model's general understanding ability.
+            Within the low-level module, a multi-scale action prediction scheme encodes trajectories from coarse to fine. This mechanism utilizes fine-grained feature outputs to correct coarse predictions, reducing cumulative errors.
             Building upon this, we propose a lightweight action decoder based on diffusion-loss that reconstructs these multi-scale features into precise actions, improving multi-modal modeling ability while maintaining high computational efficiency.
-            Experiments demonstrate HAMR's exceptional performance across over 50 tasks, outperforming state-of-the-art methods by 17% and 23% in simulated and real-world environments respectively. 
+            Experiments demonstrate HAMR's exceptional performance across over 60 tasks, outperforming state-of-the-art methods by 12% and 17% in simulated and real-world environments respectively. 
           </p>
         </div>
       </div>
