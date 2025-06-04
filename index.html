@@ -33,6 +33,12 @@
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <style>
+    h2.title.is-3.abstract-title {
+      margin-top: -64px;
+    }
+    h2.title.is-3 {
+      margin-top: -24px;
+    }
     /* 视频网格布局 */
     .video-grid {
       display: grid;
@@ -145,7 +151,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3 abstract-title">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Autoregressive mechanisms have driven milestone advancements in text and image generation. However, autoregressive-based robot policies still face critical challenges including weak holistic comprehension, significant cumulative errors, and limited multi-modal modeling ability.
@@ -160,6 +166,16 @@
     </div>
     <!--/ Abstract. -->
 
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+          <div style="text-align: center; margin-top: -10px; margin-bottom: 50px;">
+            <img src="./static/images/Figure1_v7_final.png" alt="Overview Figure" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);">
+            <div style="color: #666; font-size: 0.98em; margin-top: 0px;">Fig.1 : Overview of the HAMR.</div>
+          </div>
+      </div>
+        <!--/ Abstract. -->
+
     <div class="columns is-centered">
       <div class="column is-full-width">
         <div class="columns is-vcentered interpolation-panel">
@@ -170,42 +186,71 @@
         <h2 class="title is-3" style="font-size: 30px; text-align: center; font-weight: bold;">Real-World Experiments</h2>
         <div class="video-grid">
           <div class="video">
-            <video id="1-drawer_2x" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/1-drawer_2x.mp4" type="video/mp4">
+            <video id="1_banana_4x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/1_banana_4x.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">Fruit on plate</p>
+          </div>
+          <div class="video">
+            <video id="1_drawer_2x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/1_drawer_2x.mp4" type="video/mp4">
             </video>
             <p class="video-description">Open drawer</p>
           </div>
           <div class="video">
-            <video id="2_stack_block4X" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/1-lid_2x.mp4" type="video/mp4">
+            <video id="1_lid_2x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/1_lid_2x.mp4" type="video/mp4">
             </video>
             <p class="video-description">Cover lid</p>
           </div>
           <div class="video">
-            <video id="3_open_oven4X" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/1-oven_4x.mp4" type="video/mp4">
+            <video id="1_oven_4x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/1_oven_4x.mp4" type="video/mp4">
             </video>
             <p class="video-description">Open oven</p>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="columns is-vcentered interpolation-panel">
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+        <h2 class="title is-3" style="font-size: 30px; text-align: center; font-weight: bold;">Long-horizon Real-World Experiments</h2>
+        <div class="video-grid">
           <div class="video">
-            <video id="4_pick_mango_plate4X" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/1-long-drawer_4x.mp4" type="video/mp4">
+            <video id="2_cloth_4x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/2_cloth_4x.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">Fold cloth</p>
+          </div>
+          <div class="video">
+            <video id="2_drawer_4x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/2_drawer_4x.mp4" type="video/mp4">
             </video>
             <p class="video-description">Block in drawer</p>
           </div>
           <div class="video">
-            <video id="4_pick_mango_plate4X" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/1-long-duck_2x.mp4" type="video/mp4">
+            <video id="2_duck_2x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/2_duck_2x.mp4" type="video/mp4">
             </video>
             <p class="video-description">Toy in bowl</p>
           </div>
           <div class="video">
-            <video id="4_pick_mango_plate4X" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/1-long-tool_4x.mp4" type="video/mp4">
+            <video id="2_tool_4x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/2_tool_4x.mp4" type="video/mp4">
             </video>
             <p class="video-description">Tool in box</p>
           </div>
+          <!-- 更多视频 -->
         </div>
+
+        <!--/ Re-rendering. -->
+
       </div>
     </div>
 
@@ -219,28 +264,28 @@
         <h2 class="title is-3" style="font-size: 30px; text-align: center; font-weight: bold;">Perturbed Real-World Experiments</h2>
         <div class="video-grid">
           <div class="video">
-            <video id="5_press_button4X" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/2-banana_2x.mp4" type="video/mp4">
+            <video id="3_banana_2x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/3_banana_2x.mp4" type="video/mp4">
             </video>
-            <p class="video-description">Fruit in plate</p>
+            <p class="video-description">Fruit in plate (Position Variation)</p>
           </div>
           <div class="video">
-            <video id="6_open_microwave_oven4X" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/2-cloth_4x.mp4" type="video/mp4">
+            <video id="3_cloth_4x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/3_cloth_4x.mp4" type="video/mp4">
             </video>
-            <p class="video-description">Fold cloth</p>
+            <p class="video-description">Fold cloth (Position Variation)</p>
           </div>
           <div class="video">
-            <video id="5_press_button4X" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/2-lid-2x.mp4" type="video/mp4">
+            <video id="3_lid_2x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/3_lid_2x.mp4" type="video/mp4">
             </video>
-            <p class="video-description">Cover lid</p>
+            <p class="video-description">Cover lid (Lighting Variation)</p>
           </div>
           <div class="video">
-            <video id="6_open_microwave_oven4X" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/2-duck_4x.mp4" type="video/mp4">
+            <video id="3_duck_4x" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/3_duck_4x.mp4" type="video/mp4">
             </video>
-            <p class="video-description">Toy in bowl</p>
+            <p class="video-description">Toy in bowl (Lighting Variation)</p>
           </div>
           <!-- 更多视频 -->
         </div>
@@ -249,6 +294,7 @@
 
       </div>
     </div>
+
     <!--/ Animation. -->
   </div>
 </section>
@@ -274,6 +320,21 @@
     </div>
   </div>
 </footer>
+
+<script>
+  window.onload = function() {
+    var video1 = document.getElementById('1_drawer_2x');
+    var video2 = document.getElementById('1_lid_2x');
+    var video3 = document.getElementById('2_duck_2x');
+    var video4 = document.getElementById('3_banana_2x');
+    var video5 = document.getElementById('3_lid_2x');
+    if(video1) video1.playbackRate = 2.0;
+    if(video3) video2.playbackRate = 2.0;
+    if(video1) video3.playbackRate = 2.0;
+    if(video3) video4.playbackRate = 2.0;
+    if(video1) video5.playbackRate = 2.0;
+  };
+  </script>
 
 </body>
 </html>
